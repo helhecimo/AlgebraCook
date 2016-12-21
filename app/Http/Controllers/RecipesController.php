@@ -21,6 +21,14 @@ class RecipesController extends Controller
 	{
 		return view('recipes.add');
 	}
+	
+	public function deleteRecipe($id)
+	{
+		Recipe2::findOrFail($id)->delete();
+	
+	return redirect('/');
+	}
+	
 	public function view($id) 
 	{
 		return view('recipes.view')->with('recipe', Recipe2::find($id));
