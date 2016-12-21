@@ -1,1 +1,18 @@
 Ovdje idu svi view-ovi vezani za recepte - popis, edit, dodavanje, prikaz...
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Recipe {{ $recipe->id }}</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Recipe {{ $recipe->id }}</h1>
+		<ul>
+			<li>Id: {{ $recipe->id }}</li>
+			<li>Ime: {{ $recipe->ime }}</li>
+			<li>Korisnik_id: {{ $recipe->korisnik_id }}</li>
+			<li>Opis: {{ $recipe->opis }}</li>
+		</ul>
+	</body>
+</html>
